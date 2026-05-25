@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pranita Jadhav | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0f172a;
+color:#e2e8f0;
+line-height:1.6;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#020617dd;
+backdrop-filter:blur(10px);
+padding:15px;
+text-align:center;
+z-index:1000;
+}
+
+nav a{
+color:#e2e8f0;
+text-decoration:none;
+margin:0 15px;
+font-weight:500;
+position:relative;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0;
+height:2px;
+background:#38bdf8;
+transition:.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.blob{
+position:absolute;
+border-radius:50%;
+filter:blur(80px);
+opacity:.45;
+animation:float 8s infinite alternate;
+}
+
+.blob1{
+width:300px;
+height:300px;
+background:#6366f1;
+top:10%;
+left:10%;
+}
+
+.blob2{
+width:250px;
+height:250px;
+background:#38bdf8;
+right:10%;
+bottom:10%;
+}
+
+@keyframes float{
+from{transform:translateY(0);}
+to{transform:translateY(50px);}
+}
+
+.hero h1{
+font-size:3rem;
+z-index:2;
+}
+
+.hero span{
+color:#38bdf8;
+}
+
+.typing{
+margin-top:10px;
+font-size:1.2rem;
+color:#94a3b8;
+z-index:2;
+}
+
+section{
+max-width:1000px;
+margin:auto;
+padding:90px 20px;
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+h2{
+color:#38bdf8;
+margin-bottom:20px;
+}
+
+.card{
+background:#020617;
+padding:22px;
+margin:14px 0;
+border-radius:16px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 18px #38bdf8;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.contact-link{
+color:#38bdf8;
+text-decoration:none;
+word-break:break-all;
+}
+
+.social{
+margin-top:20px;
+}
+
+.social a{
+color:#e2e8f0;
+font-size:30px;
+margin-right:25px;
+transition:.3s;
+}
+
+.social a:hover{
+color:#38bdf8;
+transform:scale(1.2);
+}
+
+footer{
+text-align:center;
+padding:25px;
+color:#94a3b8;
+}
+
+@media(max-width:768px){
+nav a{
+display:inline-block;
+margin:8px;
+}
+.hero h1{
+font-size:2.2rem;
+}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#achievements">Achievements</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
+<h1>Hi, I'm <span>Pranita Jadhav</span></h1>
+<p class="typing" id="typing"></p>
+</div>
+
+<section id="about">
+<h2>Summary</h2>
+<div class="card">
+Enthusiastic Information Technology student with strong interest in Artificial Intelligence, software development and innovative problem solving.
+</div>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+
+<div class="card">
+B.Tech in Information Technology (Pursuing)<br>
+MIT Vishwaprayag University, Solapur
+</div>
+
+<div class="card">
+Diploma in Computer Science<br>
+S.E.S Polytechnic, Solapur
+</div>
+
+<div class="card">
+SSC Completed<br>
+Learn & Play Secondary Highschool
+</div>
+
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="card">
+<b>Technical Skills</b><br><br>
+• Python Programming<br>
+• Basic Machine Learning<br>
+• Microsoft Office<br>
+• Hardware & Networking
+</div>
+
+<div class="card">
+<b>Soft Skills</b><br><br>
+• Communication<br>
+• Teamwork<br>
+• Time Management<br>
+• Quick Learner
+</div>
+
+</div>
+</section>
+
+<section id="projects">
+<h2>AI Recipe Generator (Mise en Place)</h2>
+
+<div class="card">
+
+<p>
+An AI-powered recipe generation platform that creates personalized recipes
+using available ingredients, cuisine preferences, dietary restrictions,
+and cooking constraints. The application integrates Groq AI to generate
+complete recipes with ingredients, cooking instructions, chef tips, and
+nutrition information.
+</p>
+
+<br>
+
+<details>
+<summary><b>📌 Phase 1 – Project Planning & Requirement Analysis</b></summary>
+
+<br>
+
+<h4>Project Overview</h4>
+<p>
+The project aims to help users prepare meals using ingredients already
+available at home through AI-powered recipe generation.
+</p>
+
+<h4>Problem Statement</h4>
+<p>
+Many people have ingredients but struggle to decide what meals can be
+prepared. Existing recipe platforms require manual searching and do not
+provide personalized recommendations.
+</p>
+
+<h4>Objectives</h4>
+<ul>
+<li>Generate recipes using Artificial Intelligence.</li>
+<li>Reduce food wastage.</li>
+<li>Provide personalized cooking suggestions.</li>
+<li>Support cuisine and dietary preferences.</li>
+<li>Create an easy-to-use cooking assistant.</li>
+</ul>
+
+<h4>Requirements</h4>
+<ul>
+<li>Ingredient input system</li>
+<li>Cuisine selection</li>
+<li>Diet selection</li>
+<li>Recipe generation module</li>
+<li>Nutrition display</li>
+<li>Copy and print functionality</li>
+</ul>
+
+</details>
+
+<br>
+
+<details>
+<summary><b>📌 Phase 2 – System Design & Architecture</b></summary>
+
+<br>
+
+<h4>Technology Stack</h4>
+
+<ul>
+<li>HTML5</li>
+<li>Tailwind CSS</li>
+<li>JavaScript (ES6)</li>
+<li>Groq AI API</li>
+</ul>
+
+<h4>System Architecture</h4>
+
+<p>
+User Input → Prompt Builder → Groq AI API →
+JSON Parser → Recipe Renderer → Recipe Output
+</p>
+
+<h4>Modules</h4>
+
+<ul>
+<li>User Input Module</li>
+<li>Prompt Builder Module</li>
+<li>AI Integration Module</li>
+<li>JSON Parsing Module</li>
+<li>Recipe Display Module</li>
+</ul>
+
+<h4>Workflow</h4>
+
+<p>
+Users enter ingredients and preferences. The application generates a
+structured prompt, sends it to the Groq AI model, processes the response,
+and displays a complete recipe card.
+</p>
+
+</details>
+
+<br>
+
+<details>
+<summary><b>📌 Phase 3 – Development & Implementation</b></summary>
+
+<br>
+
+<h4>Features Developed</h4>
+
+<ul>
+<li>Ingredient-based recipe generation</li>
+<li>Cuisine and diet filters</li>
+<li>Serving size customization</li>
+<li>Cooking time constraints</li>
+<li>Recipe regeneration</li>
+<li>Copy recipe feature</li>
+<li>Print recipe functionality</li>
+</ul>
+
+<h4>Key Functions</h4>
+
+<ul>
+<li><b>generate()</b> – Generates recipes.</li>
+<li><b>buildPrompt()</b> – Creates AI prompts.</li>
+<li><b>callGroq()</b> – Connects with Groq API.</li>
+<li><b>renderRecipe()</b> – Displays recipes.</li>
+<li><b>copyRecipe()</b> – Copies recipe text.</li>
+</ul>
+
+<h4>Testing</h4>
+
+<ul>
+<li>Functional Testing</li>
+<li>API Testing</li>
+<li>UI Testing</li>
+<li>Responsive Design Testing</li>
+<li>Error Handling Testing</li>
+</ul>
+
+</details>
+
+<br>
+
+<details>
+<summary><b>📌 Phase 4 – Results & Future Scope</b></summary>
+
+<br>
+
+<h4>Results</h4>
+
+<p>
+The application successfully generates personalized recipes within
+seconds and provides a responsive user experience.
+</p>
+
+<h4>Advantages</h4>
+
+<ul>
+<li>Saves time and effort.</li>
+<li>Reduces food waste.</li>
+<li>Personalized recommendations.</li>
+<li>Fast AI-powered generation.</li>
+<li>User-friendly interface.</li>
+</ul>
+
+<h4>Future Enhancements</h4>
+
+<ul>
+<li>User login system.</li>
+<li>Save favorite recipes.</li>
+<li>Voice-based ingredient input.</li>
+<li>Shopping list generation.</li>
+<li>Multi-language support.</li>
+<li>AI-generated food images.</li>
+</ul>
+
+<h4>Conclusion</h4>
+
+<p>
+AI Recipe Generator demonstrates the practical application of Artificial
+Intelligence in cooking by providing smart, personalized, and efficient
+recipe recommendations.
+</p>
+
+</details>
+
+</div>
+</section>
+<section id="achievements">
+<h2>Achievements</h2>
+
+<div class="card">Participated in technical workshops</div>
+<div class="card">Involved in college fests</div>
+<div class="card">Good academic performance</div>
+
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+
+<div class="card">
+
+<p>📞 7498538560</p>
+<p>📧 jadhavpranita708@gmail.com</p>
+<p>📍 Solapur, Maharashtra</p>
+
+<br>
+
+<p>
+GitHub:<br>
+<a class="contact-link"
+href="https://github.com/Pj-21-pgm"
+target="_blank">
+View My GitHub Profile
+</a>
+</p>
+
+<br>
+
+<p>
+LinkedIn:<br>
+<a class="contact-link"
+href="https://www.linkedin.com/in/pranita-jadhav-b3482a2b9?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+target="_blank">
+View My LinkedIn Profile
+</a>
+</p>
+
+<br>
+
+<p>
+Portfolio Website:<br>
+<a class="contact-link"
+href="https://sites.google.com/view/pranitajadhav-portfolio/home"
+target="_blank">
+Visit My Portfolio Website
+</a>
+</p>
+
+<div class="social">
+
+<a href="https://github.com/Pj-21-pgm" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/pranita-jadhav-b3482a2b9?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="https://sites.google.com/view/pranitajadhav-portfolio/home"
+target="_blank">
+<i class="fas fa-globe"></i>
+</a>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Pranita Jadhav | Portfolio
+</footer>
+
+<script>
+const words=[
+"AI Enthusiast",
+"Future Developer",
+"Tech Learner"
+];
+
+let i=0,j=0,deleting=false;
+
+function typeEffect(){
+let current=words[i];
+
+if(!deleting){j++;}
+else{j--;}
+
+document.getElementById("typing").textContent=
+current.substring(0,j);
+
+if(!deleting && j===current.length){
+deleting=true;
+setTimeout(typeEffect,1000);
+return;
+}
+
+if(deleting && j===0){
+deleting=false;
+i=(i+1)%words.length;
+}
+
+setTimeout(typeEffect,deleting?50:100);
+}
+
+typeEffect();
+
+const sections=document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const top=window.scrollY;
+const offset=sec.offsetTop-300;
+const height=sec.offsetHeight;
+
+if(top>=offset && top<offset+height){
+sec.classList.add("show");
+}
+});
+});
+</script>
+
+</body>
+</html>
