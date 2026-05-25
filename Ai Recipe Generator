@@ -1,2 +1,208 @@
-# pranita-portfolio
-My personal resume and portfolio
+# Phase 1 – Project Planning & Requirement Analysis
+
+## Project Title
+Mise en Place – AI Recipe Studio
+
+## Introduction
+Mise en Place is an AI-powered recipe generation platform that helps users create recipes using ingredients available at home.
+
+## Problem Statement
+Many users have ingredients but struggle to decide what meal they can prepare. Existing recipe platforms require manual searching and do not provide personalized suggestions.
+
+## Objectives
+
+- Generate recipes using AI
+- Reduce food waste
+- Provide personalized cooking suggestions
+- Support dietary preferences
+- Improve cooking convenience
+
+## Scope
+
+The system allows users to:
+
+- Enter ingredients
+- Select cuisine preferences
+- Choose dietary restrictions
+- Set serving size
+- Generate recipes instantly
+
+## Functional Requirements
+
+- User ingredient input
+- Cuisine selection
+- Diet selection
+- Recipe generation
+- Nutrition information
+- Print recipe
+- Copy recipe
+
+## Non-Functional Requirements
+
+- Fast performance
+- User-friendly interface
+- Responsive design
+- Cross-browser support
+
+## Expected Outcome
+
+An intelligent recipe assistant capable of generating professional-quality recipes instantly.
+
+# Phase 2 – System Design & Architecture
+
+## Technology Stack
+
+| Technology | Purpose |
+|------------|----------|
+| HTML5 | Structure |
+| Tailwind CSS | Styling |
+| JavaScript | Logic |
+| Groq API | AI Integration |
+
+## System Architecture
+
+User Input
+↓
+Prompt Builder
+↓
+Groq AI API
+↓
+JSON Parser
+↓
+Recipe Renderer
+↓
+Recipe Output
+
+## Modules
+
+### User Input Module
+Collects ingredients and preferences.
+
+### Prompt Builder Module
+Builds structured prompts for AI.
+
+### AI Integration Module
+Communicates with Groq API.
+
+### Parser Module
+Converts JSON response into usable data.
+
+### Recipe Display Module
+Shows generated recipes.
+
+## User Interface Design
+
+- Ingredient Form
+- Cuisine Selection
+- Diet Selection
+- Recipe Card
+- Nutrition Panel
+
+## Workflow
+
+1. User enters ingredients
+2. Prompt is generated
+3. Request sent to AI
+4. AI returns recipe
+5. Recipe displayed
+
+# Phase 3 – Development & Implementation
+
+## Features Implemented
+
+### Ingredient-Based Recipe Generation
+Generates recipes from available ingredients.
+
+### Cuisine Selection
+Supports multiple cuisine styles.
+
+### Dietary Restrictions
+Supports Vegan, Vegetarian, Keto and more.
+
+### Servings Adjustment
+Recipe quantities adapt to selected servings.
+
+### Time Constraints
+Recipes generated within cooking time limits.
+
+### Regenerate Feature
+Creates alternative recipes.
+
+### Copy Recipe Feature
+Copies recipe to clipboard.
+
+### Print Recipe Feature
+Generates printable recipe cards.
+
+## Key Functions
+
+### generate()
+Handles recipe generation process.
+
+### buildPrompt()
+Creates AI prompt.
+
+### callGroq()
+Sends API request.
+
+### renderRecipe()
+Displays recipe.
+
+### copyRecipe()
+Copies recipe text.
+
+## Testing
+
+### Functional Testing
+All features tested successfully.
+
+### API Testing
+Verified AI communication.
+
+### UI Testing
+Responsive on desktop and mobile.
+
+### Error Handling
+Handled invalid API responses.
+
+
+# Phase 4 – Results, Conclusion & Future Scope
+
+## Results
+
+Successfully developed an AI-powered recipe generator that creates recipes instantly based on user requirements.
+
+## Advantages
+
+- Saves time
+- Personalized recipes
+- Reduces food waste
+- User-friendly design
+- Fast AI responses
+
+## Limitations
+
+- Internet required
+- Depends on API availability
+- No user account system
+
+## Future Enhancements
+
+### User Accounts
+Save favorite recipes.
+
+### Voice Input
+Hands-free ingredient entry.
+
+### Shopping List Generator
+Auto-generate grocery lists.
+
+### Multi-language Support
+Generate recipes in different languages.
+
+### AI Food Images
+Generate dish images automatically.
+
+## Conclusion
+
+Mise en Place demonstrates the practical use of Artificial Intelligence in everyday cooking. The project combines modern web technologies and AI to provide a fast, intuitive, and personalized cooking experience.
